@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&display=swap" rel="stylesheet">
+
+  <style type="text/css">
+    ::-webkit-scrollbar{
+      width: 0px;
+    }
+    body{
+      font-family: 'Kanit', sans-serif;
+    }
+    .mr{
+      margin-bottom: 40px;
+      margin-top: 40px;
+    }
+    .lm{
+      float:left;
+    }
+    .nav{
+      box-shadow: 0px 5px 5px 0px #DDDDDD60;
+      padding: 15px;
+      margin-bottom: 25px;
+    }
+    center>a{
+      color:#000;
+      text-decoration: none;
+      padding: 10px;
+      transition: all 0.5s ease;
+    }
+    center>a:hover{
+      color:#fff;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: #FF5733;
+    }
+    
+  </style>
+
+</head>
+<body onload="open_page(1)">
+  <nav class="nav">
+      <div class="col-8">
+        <a style="font-weight: bold;color:#000;">HANDWASH</a>
+        &nbsp;
+        <a style="font-weight: bold;color:#FF5733;">MECHANICAL</a>
+      </div>
+      <div class="col-4">
+        <div class="row">
+          <div class="col">
+            <center>
+              <a href="#" onclick="open_page(1)">HOME</a>
+            </center>
+          </div>
+          <div class="col">
+            <center>
+              <a href="#" onclick="open_page(2)">INSTRUCTION</a>
+            </center>
+          </div>
+          <div class="col">
+            <center>
+              <a href="#" onclick="open_page(3)">STATISTICS</a>
+            </center>
+          </div>
+        </div>   
+      </div>
+  </nav>
+        
+	<div class="container" id="home_page">
+    <div class="row">
+      <div class="col-5">
+        <h1 class="display-5">ความสำคัญของการล้างมือ</h1>
+        <img src="./image/7 step.jpg" width="100%">
+        <p>&nbsp;&nbsp;การล้างมือเป็นการป้องกันโรคติดต่อที่ง่ายและประหยัดที่สุดคงจะไม่มีวิธีใดที่ดีไปกว่า ‘การล้างมือ’ เพราะ ‘มือ’ เป็นอวัยวะสำคัญที่เราใช้สัมผัสผู้อื่น ใช้จับสัมผัสสิ่งของต่าง ๆ มากที่สุด จึงเสมือนเป็นสื่อกลางในการแลกเปลี่ยนเชื้อโรคจากภายนอกเข้าสู่ตัวเราและเชื้อโรคจากร่างกายเราไปสู่ผู้อื่นได้ในเวลาเดียวกัน</p>
+        <a href="https://www.youtube.com/watch?v=Agblfa8RjeY&ab_channel=ThaiPBS"><button type="button" class="btn btn-light">รับชมวิดีโอสอนล้างมือ : Click</button>
+        </a>
+      </div>
+      <div class="col-7">
+        <h1 class="display-5">7 ขั้นตอนการล้างมือที่ถูกวิธี</h1>
+       <p>ขั้นตอนที่ 1 ฝ่ามือถูฝ่ามือล้างมือด้วยน้ำสะอาดถูสบู่จนขึ้นฟองหลังจากนั้นนำฝ่ามือทั้งสองข้างประกบกันและถูวนให้ทั่ว</p>
+       <p>ขั้นตอนที่ 2 ถูหลังมือและซอกนิ้วเพื่อฆ่าเชื้อโรคบริเวณมือและซอกนิ้วด้านหลังโดยใช้ฝ่ามือถูบริเวณหลังมือและซอกนิ้วสลับไปมาทั้งสองข้าง</p>
+       <p>ขั้นตอนที่ 3 ถูฝ่ามือและซอกนิ้วนำมือทั้งสองข้างมาประกบกันถูฝ่ามือและซอกนิ้วด้านหน้าให้สะอาด</p>
+       <p>ขั้นตอนที่ 4 หลังนิ้วมือถูฝ่ามือให้นิ้วมือทั้งสองข้างงอเกี่ยวกันถูวนไปมา</p>
+       <p>ขั้นตอนที่ 5 ถูนิ้วและโคนนิ้วหัวแม่มือกางนิ้วหัวแม่มือแยกออกมาใช้ฝ่ามืออีกข้างกำรอบนิ้วหัวแม่มือแล้วถูหมุนไปรอบ ๆ ทำสลับกันทั้งสองข้าง</p>
+       <p>ขั้นตอนที่ 6 ถูปลายนิ้วมือบนฝ่ามือให้แบมือแล้วใช้ปลายนิ้วมืออีกข้างถูวนเป็นวงกลมจากนั้นสลับข้างทำแบบเดียวกัน</p>
+       <p>ขั้นตอนที่ 7 ถูรอบข้อมือกำมือรอบข้อมือข้างหนึ่งถูวนจนกว่าจะสะอาดหลังจากนั้นให้เปลี่ยนข้างทำแบบเดียวกับมือข้างแรก</p>
+
+      </div>
+    </div>
+	</div>
+
+  <div class="container" id="instruction_page">
+    <center>
+      <div class="mr">
+        <h3 class="display-5">
+          <span>STEPS TO USE</span>
+          <span>HANDWASH MACHINE</span>
+        </h3>
+      </div>
+    </center>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="col-4">
+              <img src="./image/alcohol-gel.png" width="100%">
+            </div>
+            <div class="col-8">
+              <h3 class="display-5">ขั้นตอนที่ 1 เจล</h3>
+              <p>ในส่วนของเจล  นำมือไปใกล้บริเวณที่เซนเซอร์สามารถตรวจจับเจอ หลังจากนั้นเครื่องจะทำการปล่อยเจล</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row">
+            <div class="col-4">
+              <img src="./image/handwash.png" width="100%">
+            </div>
+            <div class="col-8">
+              <h3 class="display-5">ขั้นตอนที่ 2 ล้างมือ</h3>
+              <p>หลังจากการกดเจล  นำมือไปใกล้เซนเซอร์ที่ใช้สำหรับเปิดก็อกน้ำ หลังจากนั้นล้างมือให้สะอาดตามขั้นตอน</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <div class="row">
+            <div class="col-4">
+              <img src="./image/fan.png" width="100%">
+            </div>
+            <div class="col-8">
+              <h3 class="display-5">ขั้นตอนที่ 3 เครื่องเป่า</h3>
+              <p>หลังจากล้างมือสะอาดแล้ว ต้องทำให้มือแห้งโดยการนำมือมาเป่ากับเครื่องเป่าลม</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row">
+            <div class="col-4">
+              <img src="./image/camera.png" width="100%">
+            </div>
+            <div class="col-8">
+              <h3 class="display-5">ขั้นตอนที่ 4 camera pi</h3>
+              <p>ขั้นตอนนี้จะทำการนำมือมาประมวลผลหรือเปรียบเทียบกับข้อมูลที่มีอยู่ใน Dataset แล้วส่งขึ้น Cloud</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <div class="row">
+            <div class="col-4">
+              <img src="./image/led.png" width="100%">
+            </div>
+            <div class="col-8">
+              <h3 class="display-5">ขั้นตอนที่ 5 ไฟแจ้งเตือน</h3>
+              <p>ในส่วนของไฟจะแยกออกเป็นสองส่วน หากมือประมวลผลได้สะอาดไฟแจ้งเตือนสีเขียวจะติด หากไม่สะอาดไฟจะไม่ติด</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="row">
+            <div class="col-4">
+              <img src="./image/browser.png" width="100%">
+            </div>
+            <div class="col-8">
+              <h3 class="display-5">ขั้นตอนที่ 6 เว็บไซต์</h3>
+              <p>เว็บไซต์จะดึงภาพที่ผ่านการประมวลมาแแสดงบนเว็บไซต์</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="statistics_page">
+    <center>
+      <div class="col item">
+      
+      </div>
+    </center>
+  </div>
+  <script type="text/javascript">
+    function open_page(number){
+      $("#home_page").hide()
+      $("#instruction_page").hide()
+      $("#statistics_page").hide()
+      if(number == 1){
+        $("#home_page").show()
+      }else if(number == 2){
+        $("#instruction_page").show()
+      }else if(number == 3){
+        $("#statistics_page").show()
+      }
+    }
+
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+  <script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyB6-DK_VFOpLn6rmrCkoinRnwlJH_uu2m4",
+    authDomain: "aitemp-50bec.firebaseapp.com",
+    databaseURL: "https://aitemp-50bec-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "aitemp-50bec",
+    storageBucket: "aitemp-50bec.appspot.com",
+    messagingSenderId: "230209564897",
+    appId: "1:230209564897:web:a19a4c2a4185b832fc47a0",
+    measurementId: "G-65RBBMJ210"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  var database = firebase.database();
+  var starCountRef = firebase.database().ref('ai_clean/');
+  starCountRef.on('value', (snapshot) => {
+    $(".item").empty()
+    const data = snapshot.val();
+    Object.values(data).forEach(function(item, index){
+       $(".item").append('<div class="card" style="width: 18rem;display:inline-block;margin:5px;">'
+          +'<img class="card-img-top" src="'+item[0]+'" alt="Card image cap">'
+          +'<div class="card-body">'
+          +' <h5 class="card-title">วัน '+item[1].split(" ")[0]+'</h5>'
+          +' <p class="card-text">เวลา '+item[1].split(" ")[1]+'</p>'
+          +' </div>'
+          +'</div>')
+    })
+  });
+  </script>
+</body>
+</html>
