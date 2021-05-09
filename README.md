@@ -1,2 +1,0 @@
-# handwashmechanical
-project handwashmechanical
