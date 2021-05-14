@@ -6,7 +6,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200&display=swap" rel="stylesheet">
 
@@ -77,7 +77,7 @@
     <div class="row">
       <div class="col-5">
         <h1 class="display-5">ความสำคัญของการล้างมือ</h1>
-        <img src="https://raw.githubusercontent.com/tanawa/ai_clean/gh-pages/7 step.jpg" width="100%">
+        <img src="./image/7 step.jpg" width="100%">
         <p>&nbsp;&nbsp;การล้างมือเป็นการป้องกันโรคติดต่อที่ง่ายและประหยัดที่สุดคงจะไม่มีวิธีใดที่ดีไปกว่า ‘การล้างมือ’ เพราะ ‘มือ’ เป็นอวัยวะสำคัญที่เราใช้สัมผัสผู้อื่น ใช้จับสัมผัสสิ่งของต่าง ๆ มากที่สุด จึงเสมือนเป็นสื่อกลางในการแลกเปลี่ยนเชื้อโรคจากภายนอกเข้าสู่ตัวเราและเชื้อโรคจากร่างกายเราไปสู่ผู้อื่นได้ในเวลาเดียวกัน</p>
         <a href="https://www.youtube.com/watch?v=Agblfa8RjeY&ab_channel=ThaiPBS"><button type="button" class="btn btn-light">รับชมวิดีโอสอนล้างมือ : Click</button>
         </a>
@@ -110,7 +110,7 @@
         <div class="col">
           <div class="row">
             <div class="col-4">
-              <img src="https://raw.githubusercontent.com/tanawa/ai_clean/gh-pages/alcohol-gel.png" width="100%">
+              <img src="./image/alcohol-gel.png" width="100%">
             </div>
             <div class="col-8">
               <h3 class="display-5">ขั้นตอนที่ 1 เจล</h3>
@@ -121,7 +121,7 @@
         <div class="col">
           <div class="row">
             <div class="col-4">
-              <img src="https://raw.githubusercontent.com/tanawa/ai_clean/gh-pages/handwash.png" width="100%">
+              <img src="./image/handwash.png" width="100%">
             </div>
             <div class="col-8">
               <h3 class="display-5">ขั้นตอนที่ 2 ล้างมือ</h3>
@@ -133,7 +133,7 @@
         <div class="col">
           <div class="row">
             <div class="col-4">
-              <img src="https://raw.githubusercontent.com/tanawa/ai_clean/gh-pages/fan.png" width="100%">
+              <img src="./image/fan.png" width="100%">
             </div>
             <div class="col-8">
               <h3 class="display-5">ขั้นตอนที่ 3 เครื่องเป่า</h3>
@@ -144,7 +144,7 @@
         <div class="col">
           <div class="row">
             <div class="col-4">
-              <img src="https://raw.githubusercontent.com/tanawa/ai_clean/gh-pages/camera.png" width="100%">
+              <img src="./image/camera.png" width="100%">
             </div>
             <div class="col-8">
               <h3 class="display-5">ขั้นตอนที่ 4 camera pi</h3>
@@ -156,7 +156,7 @@
         <div class="col">
           <div class="row">
             <div class="col-4">
-              <img src="https://raw.githubusercontent.com/tanawa/ai_clean/gh-pages/led.png" width="100%">
+              <img src="./image/led.png" width="100%">
             </div>
             <div class="col-8">
               <h3 class="display-5">ขั้นตอนที่ 5 ไฟแจ้งเตือน</h3>
@@ -167,7 +167,7 @@
         <div class="col">
           <div class="row">
             <div class="col-4">
-              <img src="https://raw.githubusercontent.com/tanawa/ai_clean/gh-pages/browser.png" width="100%">
+              <img src="./image/browser.png" width="100%">
             </div>
             <div class="col-8">
               <h3 class="display-5">ขั้นตอนที่ 6 เว็บไซต์</h3>
@@ -181,12 +181,38 @@
 
   <div class="container" id="statistics_page">
     <center>
+      <div class="container" style="margin-bottom:20;border-radius:20px;box-shadow:0px 0px 20px 0px #DDDDDD60;padding: 10px;padding-top: 20px;">
+        <div class="row">
+          <div class="col">
+            <p id="count_clean">สะอาด 0</p>
+            <p id="count_clean_per">เปอร์เซ็นต์สะอาด 0%</p>
+          </div>
+          <div class="col">
+            <p id="count_dirty">สกปรก 0</p>
+            <p id="count_dirty_per">เปอร์เซ็นต์สกปรก 0%</p>
+          </div>
+        </div>
+        <div class="row" style="margin: 10px;">
+          <div class="col">
+            <p id="count_all" style="padding: 5px;">ทั้งหมด 0</p>
+          </div>
+          <div class="col">
+              <select id="choose_date" onchange="load_image()" style="border-radius:20px;outline:none;box-shadow:0px 0px 20px 0px #DDDDDD60;padding: 5px;"></select>
+          </div>
+        </div>
+        
+        <!--<div>
+          <canvas id="myChart"></canvas>
+        </div>-->
+      </div>
+      <br>
       <div class="col item">
       
       </div>
     </center>
   </div>
   <script type="text/javascript">
+    
     function open_page(number){
       $("#home_page").hide()
       $("#instruction_page").hide()
@@ -205,6 +231,9 @@
   <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
   <script>
+    list = []
+    dirty = 0
+    clean = 0
   var firebaseConfig = {
     apiKey: "AIzaSyB6-DK_VFOpLn6rmrCkoinRnwlJH_uu2m4",
     authDomain: "aitemp-50bec.firebaseapp.com",
@@ -219,6 +248,20 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
   var database = firebase.database();
+  
+  var starCountRef = firebase.database().ref('ai_clean/');
+  starCountRef.on('value', (snapshot) => {
+    $("#choose_date").empty()
+    const data = snapshot.val();
+    Object.values(data).forEach(function(item, index){
+      console.log(list)
+      if(!list.includes(item[1].split(" ")[0]) && item[1].split(" ")[0].trim()!=""){
+        list.push(item[1].split(" ")[0])
+        $("#choose_date").append("<option>"+item[1].split(" ")[0]+"</option>")
+      }
+    })
+  });
+  /*
   var starCountRef = firebase.database().ref('ai_clean/');
   starCountRef.on('value', (snapshot) => {
     $(".item").empty()
@@ -232,7 +275,63 @@
           +' </div>'
           +'</div>')
     })
-  });
+  });*/
+  function load_image(){
+    dirty = 0
+    clean = 0
+    var starCountRef = firebase.database().ref('ai_clean/');
+    starCountRef.on('value', (snapshot) => {
+    $(".item").empty()
+    const data = snapshot.val();
+    Object.values(data).forEach(function(item, index){
+      if(item[1].split(" ")[0] == $("#choose_date").val()){
+       $(".item").append('<div class="card" style="width: 18rem;display:inline-block;margin:5px;">'
+          +'<img class="card-img-top" src="'+item[0]+'" alt="Card image cap">'
+          +'<div class="card-body">'
+          +' <h5 class="card-title">'+item[2]+'</h5>'
+          +' <p class="card-text">วัน '+item[1].split(" ")[0]+'</p>'
+          +' <p class="card-text">เวลา '+item[1].split(" ")[1]+'</p>'
+          +' </div>'
+          +'</div>')
+       if(item[2] == "dirty"){
+          dirty +=1
+       }else if(item[2] == "clean"){
+          clean +=1
+       }
+      }
+    })
+  }); 
+    let t_n = (clean/(dirty+clean))*100
+    let t_m = (dirty/(dirty+clean))*100
+    console.log(""+t_m+"%")
+    $("#count_clean").text("สะอาด "+clean)
+    $("#count_clean_per").text("เปอร์เซ็นต์สะอาด "+t_n.toFixed(2)+"%")
+    $("#count_dirty").text("สกปรก "+dirty)
+    $("#count_dirty_per").text("เปอร์เซ็นต์สกปรก "+t_m.toFixed(2)+"%")
+    $("#count_all").text("ทั้งหมด "+(dirty+clean))
+  /*
+  const labels = [
+
+  ];
+  const data = {
+    labels: bar,
+    datasets: [{
+      label: 'My First dataset',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [],
+    }]
+  };
+  const config = {
+    type: 'line',
+    data,
+    options: {}
+  };
+  var myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );*/
+  }
   </script>
 </body>
 </html>
