@@ -77,7 +77,7 @@
     <div class="row">
       <div class="col-5">
         <h1 class="display-5">ความสำคัญของการล้างมือ</h1>
-        <img src="https://raw.githubusercontent.com/teoend/handwashmechanical/gh-page/7%20step.jpg" width="100%">
+        <img src="./image/7 step.jpg" width="100%">
         <p>&nbsp;&nbsp;การล้างมือเป็นการป้องกันโรคติดต่อที่ง่ายและประหยัดที่สุดคงจะไม่มีวิธีใดที่ดีไปกว่า ‘การล้างมือ’ เพราะ ‘มือ’ เป็นอวัยวะสำคัญที่เราใช้สัมผัสผู้อื่น ใช้จับสัมผัสสิ่งของต่าง ๆ มากที่สุด จึงเสมือนเป็นสื่อกลางในการแลกเปลี่ยนเชื้อโรคจากภายนอกเข้าสู่ตัวเราและเชื้อโรคจากร่างกายเราไปสู่ผู้อื่นได้ในเวลาเดียวกัน</p>
         <a href="https://www.youtube.com/watch?v=Agblfa8RjeY&ab_channel=ThaiPBS"><button type="button" class="btn btn-light">รับชมวิดีโอสอนล้างมือ : Click</button>
         </a>
@@ -110,7 +110,7 @@
         <div class="col">
           <div class="row">
             <div class="col-4">
-              <img src="https://raw.githubusercontent.com/teoend/handwashmechanical/gh-page/alcohol-gel.png" width="100%">
+              <img src="./image/alcohol-gel.png" width="100%">
             </div>
             <div class="col-8">
               <h3 class="display-5">ขั้นตอนที่ 1 เจล</h3>
@@ -121,7 +121,7 @@
         <div class="col">
           <div class="row">
             <div class="col-4">
-              <img src="https://raw.githubusercontent.com/teoend/handwashmechanical/gh-page/handwash.png" width="100%">
+              <img src="./image/handwash.png" width="100%">
             </div>
             <div class="col-8">
               <h3 class="display-5">ขั้นตอนที่ 2 ล้างมือ</h3>
@@ -133,7 +133,7 @@
         <div class="col">
           <div class="row">
             <div class="col-4">
-              <img src="https://raw.githubusercontent.com/teoend/handwashmechanical/gh-page/fan.png" width="100%">
+              <img src="./image/fan.png" width="100%">
             </div>
             <div class="col-8">
               <h3 class="display-5">ขั้นตอนที่ 3 เครื่องเป่า</h3>
@@ -144,7 +144,7 @@
         <div class="col">
           <div class="row">
             <div class="col-4">
-              <img src="https://raw.githubusercontent.com/teoend/handwashmechanical/gh-page/camera.png" width="100%">
+              <img src="./image/camera.png" width="100%">
             </div>
             <div class="col-8">
               <h3 class="display-5">ขั้นตอนที่ 4 camera pi</h3>
@@ -156,7 +156,7 @@
         <div class="col">
           <div class="row">
             <div class="col-4">
-              <img src="https://raw.githubusercontent.com/teoend/handwashmechanical/gh-page/led.png" width="100%">
+              <img src="./image/led.png" width="100%">
             </div>
             <div class="col-8">
               <h3 class="display-5">ขั้นตอนที่ 5 ไฟแจ้งเตือน</h3>
@@ -167,7 +167,7 @@
         <div class="col">
           <div class="row">
             <div class="col-4">
-              <img src="https://raw.githubusercontent.com/teoend/handwashmechanical/gh-page/browser.png" width="100%">
+              <img src="./image/browser.png" width="100%">
             </div>
             <div class="col-8">
               <h3 class="display-5">ขั้นตอนที่ 6 เว็บไซต์</h3>
@@ -252,6 +252,7 @@
   var starCountRef = firebase.database().ref('ai_clean/');
   starCountRef.on('value', (snapshot) => {
     $("#choose_date").empty()
+    $("#choose_date").append("<option>กรุณาเลือก</option>")
     const data = snapshot.val();
     Object.values(data).forEach(function(item, index){
       console.log(list)
@@ -283,6 +284,7 @@
     starCountRef.on('value', (snapshot) => {
     $(".item").empty()
     const data = snapshot.val();
+    if($("#choose_date").val()!="กรุณาเลือก"){
     Object.values(data).forEach(function(item, index){
       if(item[1].split(" ")[0] == $("#choose_date").val()){
        $(".item").append('<div class="card" style="width: 18rem;display:inline-block;margin:5px;">'
@@ -300,6 +302,7 @@
        }
       }
     })
+    }
   }); 
     let t_n = (clean/(dirty+clean))*100
     let t_m = (dirty/(dirty+clean))*100
